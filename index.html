@@ -1,40 +1,310 @@
-<!DOCTYPE HTML>
-<html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <title>Lê Minh Thư</title>
-
-    <meta name="author" content="Lê Minh Thư">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lê Minh Thư - Portfolio & CV Online</title>
     
-  </head>
+    <style>
+        /* Thiết lập cơ bản */
+        :root {
+            --primary-color: #007bff;
+            --light-bg: #f8f9fa;
+            --text-color: #333;
+            --border-color: #eee;
+        }
 
-  <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Lê Minh Thư
-                </p>
-                <p>
-I am a second year student of the Faculty of Accounting - Auditing, majoring in Accounting - Auditing with the international career orientation of ACCA, Foreign Trade University, Hanoi.
-                </p>
-                <p style="text-align:center">
-                  <a href="mailto:lminhthu2606@gmail.com">Email</a> &nbsp;/&nbsp;
-                  <a href="data/MinhThu.CV.pdf">CV</a> &nbsp;/&nbsp;
-                  <a href="data/MinhThu-bio.txt">Bio</a> &nbsp;/&nbsp;
-            
-          </tbody></table>
-        
-          </tbody></table>
-        </td>
-      </tr>
-    </table>
-  </body>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 30px 20px;
+            background-color: #f4f4f4;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1100px; 
+            margin: 0 auto;
+            background-color: white; 
+            padding: 40px;
+            border-radius: 12px; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        h1, h2, h3 {
+            color: #212529;
+            font-weight: 600;
+        }
+
+        h2 {
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+        }
+
+        /* 1. HEADER */
+        .profile-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-photo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%; 
+            margin-right: 25px;
+            object-fit: cover;
+            border: 3px solid var(--primary-color); 
+        }
+
+        .text-info h1 {
+            margin: 0 0 5px 0;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+
+        .text-info .title {
+            margin: 0;
+            font-size: 1.2em;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .text-info .subtitle {
+            margin: 5px 0 0 0;
+            color: #6c757d;
+        }
+
+        /* 2. BỐ CỤC 2 CỘT */
+        .main-content {
+            display: flex; 
+            gap: 30px; 
+        }
+
+        .left-column {
+            flex: 3;
+        }
+
+        .right-column {
+            flex: 1.2;
+        }
+
+        /* 3. CÁC KHỐI NỘI DUNG (CARD) */
+        .section-block {
+            padding: 25px;
+            background-color: white;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05); 
+            border: 1px solid var(--border-color); 
+        }
+
+        .contact-info {
+            background-color: var(--light-bg); 
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        /* 4. HOẠT ĐỘNG / KINH NGHIỆM */
+        .experience-item {
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 2px solid #ddd;
+        }
+        .experience-item h3 {
+            margin: 0 0 5px 0;
+            font-size: 1.15em;
+        }
+        .experience-item .date {
+            font-style: italic;
+            color: #6c757d;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .activity-role {
+            margin-top: 10px;
+        }
+        .activity-role .role-title {
+            font-weight: bold;
+            margin: 0;
+            color: var(--primary-color);
+        }
+
+        /* 5. TAGS/CHIPS */
+        .tags-container {
+            margin-top: 15px;
+        }
+
+        .tag, .tag-interest {
+            display: inline-block;
+            background-color: #e9ecef; 
+            color: #495057;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin: 5px 8px 5px 0;
+            transition: background-color 0.3s;
+        }
+
+        .tag-interest {
+            background-color: #d1e7dd;
+            color: #0f5132;
+        }
+
+        /* 6. BUTTONS */
+        .btn-download, .btn-pdf {
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-align: center;
+            display: inline-block;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn-download:hover, .btn-pdf:hover {
+            background-color: #0056b3;
+            transform: translateY(-1px);
+        }
+
+        .btn-pdf {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .main-content {
+                flex-direction: column;
+            }
+            .profile-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .btn-download {
+                margin-top: 20px;
+                width: 100%;
+            }
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="profile-header">
+            <div class="profile-info">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAE3AUsDASIAAhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAAAgMAAQQFBgf/xAA1EAACAQMCAwUHAwQCAwAAAAAAAQIDBBEFEiExQQYTUQciYRcyQlKBkRQjFhc0NWJxgpLB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEF/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAEB/9oADAMBAAIRAxEAPwD54r5d0VwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwTưA" data-image-url="image_556ff0.png" class="profile-photo">
+                <div class="text-info">
+                    [cite_start]<h1>LÊ MINH THƯ [cite: 1]</h1>
+                    [cite_start]<p class="title">Sinh viên Kế toán - Kiểm toán ACCA [cite: 9, 12]</p>
+                    [cite_start]<p class="subtitle">Trường Đại học Ngoại Thương Hà Nội [cite: 9, 11]</p>
+                </div>
+            </div>
+            <a href="CV thư.pdf" class="btn-download">Download CV</a>
+        </header>
+
+        <main class="main-content">
+            <section class="left-column">
+                <div class="card section-block">
+                    [cite_start]<h2>Giới thiệu [cite: 8]</h2>
+                    [cite_start]<p>Tôi là sinh viên năm hai khoa Kế toán - Kiểm toán, chuyên ngành Kế toán - Kiểm toán theo định hướng nghề nghiệp quốc tế ACCA, tại Trường Đại học Ngoại Thương Hà Nội[cite: 9, 12, 11].</p>
+                    [cite_start]<p>Với vai trò Phó Chủ tịch Đối nội Gen 5 của SBC YC - Fiis [cite: 17, 15][cite_start], tôi đã tích lũy kinh nghiệm vững chắc trong việc xây dựng cộng đồng và tổ chức các sự kiện online[cite: 23]. [cite_start]Tôi tự tin vào các kỹ năng mềm như làm việc nhóm và quản lý thời gian, cùng khả năng sử dụng thành thạo các công cụ Microsoft và Google[cite: 20, 21].</p>
+                </div>
+                
+                <div class="card section-block">
+                    [cite_start]<h2>Học vấn [cite: 10]</h2>
+                    <div class="experience-item">
+                        [cite_start]<h3>Trường Đại học Ngoại thương [cite: 11]</h3>
+                        [cite_start]<p class="date">2024 - Hiện tại [cite: 13]</p>
+                        [cite_start]<p>Kế toán - Kiểm toán ACCA [cite: 12]</p>
+                    </div>
+                </div>
+
+                <div class="card section-block">
+                    [cite_start]<h2>Hoạt động Cộng đồng [cite: 14]</h2>
+                    
+                    <div class="experience-item">
+                        [cite_start]<h3>Social Business Creation Youth Community (SBC YC - Fiis) [cite: 15]</h3>
+                        
+                        <div class="activity-role">
+                            [cite_start]<p class="role-title">Phó Chủ tịch Đối nội Gen 5 [cite: 17]</p>
+                            [cite_start]<p>Phụ trách các hoạt động nội bộ và gắn kết thành viên. [cite: 17]</p>
+                        </div>
+                        <div class="activity-role">
+                            [cite_start]<p class="role-title">Thành viên Ban tổ chức Gen 4 [cite: 16]</p>
+                            [cite_start]<p>Tham gia tổ chức các talk show, buổi phát động, diễn đàn, bootcamp online[cite: 23].</p>
+                        </div>
+                        [cite_start]<p class="date">2024 - Hiện tại [cite: 22]</p>
+                    </div>
+                </div>
+
+                <div class="card section-block">
+                    [cite_start]<h2>Kỹ năng [cite: 18]</h2>
+                    <div class="tags-container">
+                        <span class="tag">Kế toán ACCA</span>
+                        [cite_start]<span class="tag">Tiếng Anh B2 (Nghe - Đọc - Hiểu) [cite: 19]</span>
+                        [cite_start]<span class="tag">Canva (Thiết kế) [cite: 24]</span>
+                        [cite_start]<span class="tag">Microsoft & Google Tools (Thành thạo) [cite: 21]</span>
+                        [cite_start]<span class="tag">Làm việc nhóm [cite: 20]</span>
+                        [cite_start]<span class="tag">Quản lý thời gian [cite: 20]</span>
+                    </div>
+                </div>
+
+            </section>
+
+            <aside class="right-column">
+                <div class="card section-block contact-info">
+                    <h2>Liên hệ</h2>
+                    [cite_start]<p><strong>Email:</strong> <a href="mailto:minhthu2606@gmail.com">minhthu2606@gmail.com</a> [cite: 3]</p>
+                    [cite_start]<p><strong>Điện thoại:</strong> 0822906206 [cite: 5]</p>
+                    [cite_start]<p><strong>Địa chỉ:</strong> Đống Đa, Hà Nội, Việt Nam [cite: 4]</p>
+                    [cite_start]<p><strong>LinkedIn:</strong> <a href="#">Minh Thư Lê</a> [cite: 6]</p>
+                    <a href="CV thư.pdf" class="btn-pdf">Tải CV (PDF)</a>
+                </div>
+                
+                <div class="card section-block quick-links">
+                    [cite_start]<h2>Sở thích & Điều quan tâm [cite: 25]</h2>
+                    <p class="interest-detail">
+                        Quan tâm đến các lĩnh vực sáng tạo, khám phá và phát triển bản thân:
+                    </p>
+                    <div class="tags-container">
+                        [cite_start]<span class="tag-interest">Thời trang [cite: 26]</span>
+                        [cite_start]<span class="tag-interest">Du lịch [cite: 27]</span>
+                        [cite_start]<span class="tag-interest">Tình nguyện [cite: 28]</span>
+                        [cite_start]<span class="tag-interest">Ẩm thực [cite: 29]</span>
+                        [cite_start]<span class="tag-interest">Học ngoại ngữ [cite: 30]</span>
+                        [cite_start]<span class="tag-interest">Đọc sách [cite: 31]</span>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+</body>
 </html>
