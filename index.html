@@ -3,103 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lê Minh Thư - Profile</title>
+    <title>Profile - Minh Thư</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="background-overlay"></div>
-    <div class="main-wrapper">
-        
-        <header class="profile-header-card">
-            <div class="avatar-info-container">
-                <img src="avatar.jfif" alt="Ảnh đại diện Lê Minh Thư" class="profile-avatar">
-                <div class="text-info">
-                    <h1>Lê Minh Thư</h1>
-                    <p class="subtitle">Undergraduate Student — Accounting & Auditing ACCA</p>
-                    <p class="meta-text">Former: Deputy Head of Internal Affairs, SBC YC</p>
-                </div>
-            </div>
-            <a href="CV_LeMinhThu.pdf" class="btn-download">Download CV</a>
-        </header>
 
-        <div class="content-columns">
-            <div class="left-column">
-                <div class="section-card">
-                    <h2>Giới thiệu</h2>
-                    <p>Tôi là sinh viên năm hai khoa Kế toán - Kiểm toán, chuyên ngành Kế toán - Kiểm toán theo định hướng nghề nghiệp quốc tế ACCA, trường Đại học Ngoại Thương Hà Nội. Tôi tích lũy kinh nghiệm vững chắc trong việc xây dựng cộng đồng và tổ chức sự kiện.</p>
-                </div>
-                
-                <div class="section-card timeline-section">
-                    <h2>Kinh nghiệm & Hoạt động</h2>
-                    
-                    <div class="timeline-item-dark">
-                        <span class="label experience">KINH NGHIỆM</span>
-                        <h3>Phó Chủ tịch Đối nội Gen 5</h3>
-                        <p class="meta">Social Business Creation Youth Community (SBC YC - FIIS) | Tháng 9/2025 - nay </p>
-                        <ul>
-                            <li>Thành viên Ban tổ chức Gen 4.</li>
-                            <li>Tổ chức sự kiện online cho các talk show, buổi phát động.</li>
-                        </ul>
-                    </div>
+    <div class="container">
 
-                    <div class="timeline-item-dark">
-                        <span class="label education">HỌC VẤN</span>
-                        <h3>Kế toán - Kiểm toán ACCA</h3>
-                        <p class="meta">Trường Đại học Ngoại thương | 2024 - nay</p>
-                    </div>
-                </div>
+        <!-- HEADER -->
+        <div class="profile-card">
+            <img src="images/avatar.jpg" class="avatar" alt="avatar">
 
-                <div class="section-card skills-section">
-                    <h2>Kỹ năng</h2>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <h3>Mềm</h3>
-                            <ul>
-                                <li>Làm việc nhóm, cá nhân</li>
-                                <li>Quản lý thời gian</li>
-                            </ul>
-                        </div>
-                        <div class="skill-item">
-                            <h3>Công cụ</h3>
-                            <ul>
-                                <li>Microsoft, Google Suite</li>
-                                <li>Thiết kế Canva</li>
-                            </ul>
-                        </div>
-                        <div class="skill-item">
-                            <h3>Ngôn ngữ</h3>
-                            <ul>
-                                <li>Tiếng Anh (B2)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="info">
+                <h1>Lê Minh Thư</h1>
+                <h3>Undergraduate Student — Accounting & Auditing</h3>
+                <p>Foreign Trade University</p>
 
-            <div class="right-column">
-                <div class="card contact-info">
-                    <h2>Liên hệ</h2>
-                    <p><i class="fas fa-envelope icon"></i> Email: <a href="mailto:minhthu2606@gmail.com">minhthu2606@gmail.com</a></p>
-                    <p><i class="fas fa-phone icon"></i> Điện thoại: 0822906206</p>
-                    <p><i class="fab fa-linkedin icon"></i> LinkedIn: <a href="#">Minh Thư Lê</a></p>
-                    <p><i class="fas fa-map-marker-alt icon"></i> Địa chỉ: Đống Đa, Hà Nội</p>
-                    <a href="CV_LeMinhThu.pdf" class="btn-pdf">Tải CV (PDF)</a>
-                </div>
-
-                <div class="card quick-links">
-                    <h2>Điều quan tâm</h2>
-                    <div class="interest-tags">
-                        <span class="tag">Thời trang</span>
-                        <span class="tag">Du lịch</span>
-                        <span class="tag">Tình nguyện</span>
-                        <span class="tag">Ẩm thực</span>
-                        <span class="tag">Đọc sách</span>
-                    </div>
-                </div>
+                <a href="CV.pdf" class="btn">Download CV</a>
             </div>
         </div>
+
+        <!-- ABOUT -->
+        <div class="box">
+            <h2>Giới thiệu</h2>
+            <p>
+                Tôi là sinh viên năm hai khoa Kế toán - Kiểm toán theo định hướng ACCA tại trường Đại học Ngoại Thương.
+                Tôi yêu thích lĩnh vực kế toán, phân tích tài chính và các mô hình kinh doanh bền vững.
+            </p>
+
+            <div class="tags">
+                <span>Kế toán</span>
+                <span>ACCA</span>
+                <span>Finance</span>
+            </div>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="box">
+            <h2>Liên hệ</h2>
+            <p>Email: <a href="mailto:lminhthu2606@gmail.com">lminhthu2606@gmail.com</a></p>
+            <p>Facebook: <a href="#">Minh Thư</a></p>
+            <p>GitHub: <a href="https://github.com/">github_profile</a></p>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="box">
+            <h2>Học vấn</h2>
+            <p><strong>Foreign Trade University</strong> — Accounting & Auditing</p>
+            <p>2024 — nay</p>
+        </div>
+
+        <!-- ACTIVITIES -->
+        <div class="box">
+            <h2>Hoạt động</h2>
+            <ul>
+                <li>Thành viên SBC Youth Community | Tháng 12/2024 - Tháng 8/2025</li>
+                <li>Tổ chức event online</li>
+                <li>Phó Chủ tịch Đối nội Gen 5 | Tháng 9/2025 - nay</li>
+            </ul>
+        </div>
+
     </div>
+
 </body>
 </html>
