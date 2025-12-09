@@ -3,308 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lê Minh Thư - Portfolio & CV Online</title>
-    
-    <style>
-        /* Thiết lập cơ bản */
-        :root {
-            --primary-color: #007bff;
-            --light-bg: #f8f9fa;
-            --text-color: #333;
-            --border-color: #eee;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 30px 20px;
-            background-color: #f4f4f4;
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            max-width: 1100px; 
-            margin: 0 auto;
-            background-color: white; 
-            padding: 40px;
-            border-radius: 12px; 
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        h1, h2, h3 {
-            color: #212529;
-            font-weight: 600;
-        }
-
-        h2 {
-            border-left: 4px solid var(--primary-color);
-            padding-left: 15px;
-            margin-bottom: 20px;
-            font-size: 1.6em;
-        }
-
-        /* 1. HEADER */
-        .profile-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 30px;
-            border-bottom: 2px solid var(--border-color);
-            margin-bottom: 30px;
-        }
-
-        .profile-info {
-            display: flex;
-            align-items: center;
-        }
-
-        .profile-photo {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%; 
-            margin-right: 25px;
-            object-fit: cover;
-            border: 3px solid var(--primary-color); 
-        }
-
-        .text-info h1 {
-            margin: 0 0 5px 0;
-            font-size: 2.5em;
-            font-weight: 700;
-        }
-
-        .text-info .title {
-            margin: 0;
-            font-size: 1.2em;
-            color: var(--primary-color);
-            font-weight: 500;
-        }
-
-        .text-info .subtitle {
-            margin: 5px 0 0 0;
-            color: #6c757d;
-        }
-
-        /* 2. BỐ CỤC 2 CỘT */
-        .main-content {
-            display: flex; 
-            gap: 30px; 
-        }
-
-        .left-column {
-            flex: 3;
-        }
-
-        .right-column {
-            flex: 1.2;
-        }
-
-        /* 3. CÁC KHỐI NỘI DUNG (CARD) */
-        .section-block {
-            padding: 25px;
-            background-color: white;
-            border-radius: 8px;
-            margin-bottom: 25px;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.05); 
-            border: 1px solid var(--border-color); 
-        }
-
-        .contact-info {
-            background-color: var(--light-bg); 
-        }
-
-        .contact-info p {
-            margin: 5px 0;
-        }
-
-        /* 4. HOẠT ĐỘNG / KINH NGHIỆM */
-        .experience-item {
-            margin-bottom: 20px;
-            padding-left: 15px;
-            border-left: 2px solid #ddd;
-        }
-        .experience-item h3 {
-            margin: 0 0 5px 0;
-            font-size: 1.15em;
-        }
-        .experience-item .date {
-            font-style: italic;
-            color: #6c757d;
-            margin-bottom: 10px;
-            font-size: 0.95em;
-        }
-
-        .activity-role {
-            margin-top: 10px;
-        }
-        .activity-role .role-title {
-            font-weight: bold;
-            margin: 0;
-            color: var(--primary-color);
-        }
-
-        /* 5. TAGS/CHIPS */
-        .tags-container {
-            margin-top: 15px;
-        }
-
-        .tag, .tag-interest {
-            display: inline-block;
-            background-color: #e9ecef; 
-            color: #495057;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            margin: 5px 8px 5px 0;
-            transition: background-color 0.3s;
-        }
-
-        .tag-interest {
-            background-color: #d1e7dd;
-            color: #0f5132;
-        }
-
-        /* 6. BUTTONS */
-        .btn-download, .btn-pdf {
-            background-color: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            padding: 12px 25px;
-            border-radius: 6px;
-            text-align: center;
-            display: inline-block;
-            font-weight: 600;
-            transition: background-color 0.3s, transform 0.2s;
-        }
-
-        .btn-download:hover, .btn-pdf:hover {
-            background-color: #0056b3;
-            transform: translateY(-1px);
-        }
-
-        .btn-pdf {
-            width: 100%;
-            margin-top: 20px;
-        }
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            .main-content {
-                flex-direction: column;
-            }
-            .profile-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .btn-download {
-                margin-top: 20px;
-                width: 100%;
-            }
-            .container {
-                padding: 20px;
-            }
-        }
-    </style>
+    <title>Hồ Sơ Cá Nhân - Lê Minh Thư</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <header class="profile-header">
-            <div class="profile-info">
-                <img src="data:image/jpeg;base64,/c80391ec-75d6-41bf-89be-32f8c675bb73/9oADAMBAAIRAxEAPwD54r5d0VwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwVwTưA" data-image-url="image_556ff0.png" class="profile-photo">
-                <div class="text-info">
-                    <h1>LÊ MINH THƯ </h1>
-                    <p class="title">Sinh viên Kế toán - Kiểm toán ACCA </p>
-                    <p class="subtitle">Trường Đại học Ngoại Thương Hà Nội </p>
+            <div class="avatar-container">
+                <img src="avatar.jpg" alt="Ảnh đại diện Lê Minh Thư" class="profile-avatar">
+            </div>
+            <div class="header-info">
+                <h1>LÊ MINH THƯ</h1>
+                <p class="subtitle">Sinh viên năm hai, Kế toán - Kiểm toán ACCA</p>
+                <div class="contact-links">
+                    <a href="mailto:minhthu2606@gmail.com"><i class="fas fa-envelope"></i> minhthu2606@gmail.com</a>
+                    <a href="tel:0822906206"><i class="fas fa-phone"></i> 0822906206</a>
+                    <a href="#"><i class="fab fa-linkedin"></i> Minh Thư Lê</a>
+                    <span><i class="fas fa-map-marker-alt"></i> Đống Đa, Hà Nội, Việt Nam</span>
                 </div>
             </div>
-            <a href="CV thư.pdf" class="btn-download">Download CV</a>
         </header>
 
-        <main class="main-content">
-            <section class="left-column">
-                <div class="card section-block">
-                    <h2>Giới thiệu </h2>
-                    <p>Tôi là sinh viên năm hai khoa Kế toán - Kiểm toán, chuyên ngành Kế toán - Kiểm toán theo định hướng nghề nghiệp quốc tế ACCA, tại Trường Đại học Ngoại Thương Hà Nội.</p>
-                    <p>Với vai trò Phó Chủ tịch Đối nội Gen 5 của SBC YC - Fiis, tôi đã tích lũy kinh nghiệm vững chắc trong việc xây dựng cộng đồng và tổ chức các sự kiện online. Tôi tự tin vào các kỹ năng mềm như làm việc nhóm và quản lý thời gian, cùng khả năng sử dụng thành thạo các công cụ Microsoft và Google.</p>
-                </div>
-                
-                <div class="card section-block">
-                    <h2>Học vấn </h2>
-                    <div class="experience-item">
-                        <h3>Trường Đại học Ngoại thương </h3>
-                        <p class="date">2024 - Hiện tại </p>
-                        <p>Kế toán - Kiểm toán ACCA </p>
-                    </div>
-                </div>
+        <section class="main-content">
+            <div class="section">
+                <h2><i class="fas fa-user-circle icon-title"></i> Giới Thiệu</h2>
+                <p>Tôi là sinh viên năm hai khoa Kế toán - Kiểm toán, chuyên ngành Kế toán - Kiểm toán theo định hướng nghề nghiệp quốc tế ACCA, trường Đại học Ngoại Thương Hà Nội.</p>
+            </div>
 
-                <div class="card section-block">
-                    <h2>Hoạt động Cộng đồng</h2>
-                    
-                    <div class="experience-item">
-                        <h3>Social Business Creation Youth Community (SBC YC - FIIS) </h3>
-                        
-                        <div class="activity-role">
-                            <p class="role-title">Phó Chủ tịch Đối nội Gen 5 </p>
-                            <p>Phụ trách các hoạt động nội bộ và gắn kết thành viên. </p>
+            <div class="row">
+                <div class="column">
+                    <div class="section">
+                        <h2><i class="fas fa-graduation-cap icon-title"></i> Học Vấn</h2>
+                        <div class="timeline-item">
+                            <h3>Trường Đại học Ngoại thương</h3>
+                            <p class="timeline-meta">Kế toán - Kiểm toán ACCA | 2024 - nay</p>
                         </div>
-                        <div class="activity-role">
-                            <p class="role-title">Thành viên Ban tổ chức Gen 4 </p>
-                            <p>Tham gia tổ chức các talk show, buổi phát động, diễn đàn, bootcamp online.</p>
-                        </div>
-                        <p class="date">2024 - Hiện tại </p>
                     </div>
                 </div>
 
-                <div class="card section-block">
-                    <h2>Kỹ năng </h2>
-                    <div class="tags-container">
-                        <span class="tag">Kế toán ACCA</span>
-                        <span class="tag">Tiếng Anh B2 (Nghe - Đọc - Hiểu) </span>
-                       <span class="tag">Canva (Thiết kế) </span>
-                       <span class="tag">Microsoft & Google Tools (Thành thạo) </span>
-                        <span class="tag">Làm việc nhóm <span>
-                        <span class="tag">Quản lý thời gian </span>
+                <div class="column">
+                    <div class="section">
+                        <h2><i class="fas fa-tools icon-title"></i> Kỹ Năng</h2>
+                        <ul class="skills-list">
+                            <li><strong>Ngôn ngữ:</strong> Nghe - Đọc - Hiểu tiếng Anh (B2), giao tiếp cơ bản.</li>
+                            <li><strong>Kỹ năng mềm:</strong> Làm việc cá nhân, làm việc nhóm, quản lý thời gian.</li>
+                            <li><strong>Tin học văn phòng:</strong> Sử dụng tương đối thành thạo các công cụ Microsoft, Google.</li>
+                            <li><strong>Thiết kế:</strong> Canva.</li>
+                        </ul>
                     </div>
                 </div>
+            </div>
 
-            </section>
+            <div class="section">
+                <h2><i class="fas fa-running icon-title"></i> Hoạt Động</h2>
+                <div class="timeline-item">
+                    <h3>Social Business Creation Youth Community (SBC YC - Fiis)</h3>
+                    <p class="timeline-meta">2024 - nay</p>
+                    <ul>
+                        <li>Phó Chủ tịch Đối nội Gen 5.</li>
+                        <li>Thành viên Ban tổ chức Gen 4.</li>
+                        <li>Tổ chức sự kiện online cho các talk show, buổi phát động, diễn đàn, bootcamp.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><i class="fas fa-heart icon-title"></i> Điều Quan Tâm</h2>
+                <div class="interest-tags">
+                    <span class="tag">Thời trang</span>
+                    <span class="tag">Du lịch</span>
+                    <span class="tag">Tình nguyện</span>
+                    <span class="tag">Ẩm thực</span>
+                    <span class="tag">Học ngoại ngữ</span>
+                    <span class="tag">Đọc sách</span>
+                </div>
+            </div>
+        </section>
 
-          <aside class="right-column">
-                <div class="card section-block contact-info">
-                    <h2>Liên hệ</h2>
-                    <p><strong>Email:</strong> <a href="mailto:minhthu2606@gmail.com">minhthu2606@gmail.com</a></p>
-                    <p><strong>Điện thoại:</strong> 0822906206</p>
-                    <p><strong>Địa chỉ:</strong> Đống Đa, Hà Nội, Việt Nam</p>
-                    <p><strong>LinkedIn:</strong> <a href="#">Minh Thư Lê</a> </p>
-                    <a href="CV thư.pdf" class="btn-pdf">Tải CV (PDF)</a>
-                </div>
-                
-                <div class="card section-block quick-links">
-                    <h2>Sở thích & Điều quan tâm</h2>
-                    <p class="interest-detail">
-                    Quan tâm đến các lĩnh vực sáng tạo, khám phá và phát triển bản thân:
-                    </p>
-                <div class="tags-container">
-                        <span class="tag-interest">Thời trang</span>
-                        <span class="tag-interest">Du lịch</span>
-                        <span class="tag-interest">Tình nguyện</span>
-                        <span class="tag-interest">Ẩm thực</span>
-                        <span class="tag-interest">Học ngoại ngữ</span>
-                        <span class="tag-interest">Đọc sách</span>
-                    </div>
-                </div>
-            </aside>
-        </main>
+        <footer>
+            <p>Hồ sơ được tạo trên nền tảng <a href="https://github.com/your-username" target="_blank">GitHub Pages</a>.</p>
+        </footer>
     </div>
 </body>
 </html>
