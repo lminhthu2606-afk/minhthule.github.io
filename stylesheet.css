@@ -1,4 +1,4 @@
-/* BACKGROUND AND GENERAL DARK MODE */
+/* GENERAL STYLES */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -10,72 +10,109 @@ body {
 }
 
 a {
-    color: #87ceeb;
+    color: #87ceeb; /* Màu xanh nhạt cho links */
     text-decoration: none;
 }
-
 a:hover {
     text-decoration: underline;
 }
 
-/* Ẩnh nền không gian hoặc gradient tối */
+/* BACKGROUND AND OVERLAY */
 .background-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* SỬ DỤNG GRADIENT (Không cần ảnh, tối ưu hóa) */
+    /* Gradient tối cho hiệu ứng thẩm mỹ (có thể thay bằng ảnh không gian) */
     background: linear-gradient(135deg, #1A1A2E 0%, #0F0F1A 100%); 
     opacity: 1; 
     z-index: -1;
 }
 
 .main-wrapper {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 40px auto;
     padding: 0 20px;
     position: relative;
     z-index: 1;
 }
 
-/* HEADER STYLE */
-.dark-header {
-    text-align: center;
-    padding: 40px 0;
+/* HEADER CARD - PHẦN TRÊN CÙNG */
+.profile-header-card {
+    background-color: rgba(30, 30, 50, 0.85);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
     margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avatar-info-container {
+    display: flex;
+    align-items: center;
+}
+
+/* CHỈNH KÍCH THƯỚC AVATAR NHỎ HƠN */
+.profile-avatar {
+    width: 80px; /* Đã điều chỉnh nhỏ hơn (trước đây là 120px) */
+    height: 80px; /* Đã điều chỉnh nhỏ hơn */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(173, 216, 230, 0.4);
+    box-shadow: 0 0 10px rgba(173, 216, 230, 0.5); 
+    margin-right: 20px;
+}
+
+.text-info h1 {
+    font-size: 1.8em;
+    margin: 0;
     color: white;
 }
 
-.avatar-container {
-    margin-bottom: 20px;
-}
-
-.profile-avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid rgba(173, 216, 230, 0.4);
-    box-shadow: 0 0 15px rgba(173, 216, 230, 0.5); 
-}
-
-.dark-header h1 {
-    font-size: 2.5em;
-    margin: 10px 0 5px 0;
-    font-weight: 700;
-}
-
-.dark-header .subtitle {
-    font-size: 1.1em;
+.subtitle {
+    font-size: 1em;
     color: #a8a8c0;
+    margin: 5px 0 3px 0;
 }
 
-/* THẺ NỘI DUNG CHUNG */
+.meta-text {
+    font-size: 0.9em;
+    color: #a8a8c0;
+    margin: 0;
+}
+
+.btn-download {
+    background-color: #87ceeb;
+    color: #1a1a2e;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* CONTENT COLUMNS - BỐ CỤC 2 CỘT */
+.content-columns {
+    display: flex;
+    gap: 30px;
+}
+
+.left-column {
+    flex: 2; /* Cột trái lớn hơn */
+}
+
+.right-column {
+    flex: 1; /* Cột phải nhỏ hơn */
+}
+
+/* THẺ NỘI DUNG CHUNG (Section Card) */
 .section-card {
     background-color: rgba(30, 30, 50, 0.85); 
     backdrop-filter: blur(5px); 
-    padding: 30px;
+    padding: 25px;
     margin-bottom: 30px;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
@@ -86,12 +123,28 @@ a:hover {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 10px;
     margin-top: 0;
+    font-size: 1.4em;
 }
 
-/* CONTACT INFO */
+/* CỘT PHẢI - CARD STYLE */
+.card {
+    background-color: rgba(30, 30, 50, 0.85); 
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    color: #87ceeb; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
 .contact-info p {
     margin: 8px 0;
-    font-size: 1em;
+    font-size: 0.95em;
 }
 
 .contact-info .icon {
@@ -99,17 +152,21 @@ a:hover {
     color: #87ceeb;
 }
 
-/* TIMELINE STYLE */
-.timeline-container {
-    padding: 30px 40px;
-    margin-bottom: 30px;
-    position: relative;
-    border-left: 2px solid #5a5a7b; /* Đường kẻ chính */
+.btn-pdf {
+    display: block;
+    text-align: center;
+    background-color: #87ceeb;
+    color: #1a1a2e;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: bold;
 }
 
-.timeline-container h2 {
-    color: white;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+/* TIMELINE STYLE (KINH NGHIỆM) */
+.timeline-section {
+    border-left: 2px solid #5a5a7b; /* Đường kẻ chính */
+    padding-left: 40px;
 }
 
 .timeline-item-dark {
@@ -143,13 +200,6 @@ a:hover {
     margin-top: 0;
 }
 
-.timeline-item-dark ul {
-    font-size: 0.9em;
-    margin-top: 5px;
-    padding-left: 20px;
-    color: #ccc;
-}
-
 .label {
     display: inline-block;
     padding: 3px 10px;
@@ -157,61 +207,78 @@ a:hover {
     font-size: 0.75em;
     font-weight: bold;
     margin-bottom: 5px;
-}
-
-.experience, .education {
     background-color: #5a5a7b;
     color: white;
 }
 
+.timeline-item-dark ul {
+    font-size: 0.9em;
+    margin-top: 5px;
+    padding-left: 20px;
+    color: #ccc;
+}
+
 /* SKILLS GRID */
-.skills-section {
-    padding: 30px;
-    margin-bottom: 30px;
-    border-radius: 15px;
-}
-
-.skills-section h2 {
-    color: white;
-}
-
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 15px;
+    margin-top: 15px;
 }
 
-.skill-card {
-    background-color: rgba(30, 30, 50, 0.8);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-    border: 1px solid transparent;
-    border-image: linear-gradient(45deg, #7b68ee, #87ceeb) 1;
+.skill-item h3 {
+    font-size: 1em;
+    color: white;
+    margin: 0 0 5px 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    padding-bottom: 5px;
 }
 
-.skill-card h3 {
-    text-align: center;
-    color: #87ceeb;
-    margin-top: 0;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 1.1em;
-}
-
-.skill-card ul {
+.skill-item ul {
     list-style: none;
     padding: 0;
-    text-align: left;
     font-size: 0.9em;
+    color: #ccc;
+}
+
+/* INTEREST TAGS */
+.interest-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.tag {
+    background-color: #5a5a7b;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85em;
 }
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
+    .content-columns {
+        flex-direction: column;
+    }
+    .profile-header-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .btn-download {
+        margin-top: 15px;
+        width: 100%;
+        text-align: center;
+    }
     .skills-grid {
         grid-template-columns: 1fr;
     }
-    .timeline-container {
-        padding: 30px 20px;
+    .timeline-section {
+        border-left: none;
+        padding-left: 0;
+    }
+    .timeline-item-dark::before {
+        display: none; /* Ẩn chấm tròn khi ở chế độ di động */
     }
 }
