@@ -3,227 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lê Minh Thư - CV Cá Nhân</title>
-    <style>
-        /* CSS Cơ bản */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        .cv-container {
-            display: flex;
-            max-width: 1000px;
-            margin: 30px auto;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        /* Cột Trái: Sidebar - Thông tin cá nhân, liên hệ, kỹ năng */
-        .left-column {
-            flex: 1;
-            padding: 30px;
-            background-color: #2c3e50; /* Màu nền đậm */
-            color: #ecf0f1;
-            box-sizing: border-box;
-        }
-        .left-column h2 {
-            color: #f39c12; /* Màu vàng cam làm nổi bật tiêu đề */
-            border-bottom: 2px solid #34495e;
-            padding-bottom: 5px;
-            margin-top: 25px;
-            font-size: 1.2em;
-            text-transform: uppercase;
-        }
-        .left-column p {
-            font-size: 0.9em;
-        }
-
-        /* Ảnh đại diện */
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            border: 5px solid #ecf0f1;
-        }
-
-        /* Tên và chức danh */
-        .name-title h1 {
-            font-size: 2em;
-            text-align: center;
-            margin: 0 0 5px 0;
-            color: #fff;
-        }
-        .name-title p {
-            text-align: center;
-            font-style: italic;
-            margin-bottom: 20px;
-            color: #bdc3c7;
-        }
-
-        /* Danh sách (Sở thích, Tính cách, Kỹ năng) */
-        ul.list-detail {
-            list-style: none;
-            padding: 0;
-        }
-        ul.list-detail li {
-            margin-bottom: 8px;
-            padding-left: 0;
-            font-size: 0.9em;
-        }
-        ul.list-detail.trait-list {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        ul.list-detail.trait-list li {
-            background-color: #f39c12;
-            color: #2c3e50;
-            padding: 5px 12px;
-            border-radius: 15px;
-            margin: 0 10px 10px 0;
-            font-weight: bold;
-        }
-
-        /* Cột Phải: Nội dung chính - Giới thiệu, Học vấn, Hoạt động */
-        .right-column {
-            flex: 2;
-            padding: 30px;
-            box-sizing: border-box;
-        }
-        .right-column h2 {
-            color: #c0392b; /* Màu đỏ làm nổi bật */
-            border-bottom: 3px solid #e74c3c;
-            padding-bottom: 8px;
-            margin-top: 0;
-            margin-bottom: 15px;
-            font-size: 1.8em;
-            text-transform: uppercase;
-        }
-        .section-content {
-            margin-bottom: 25px;
-        }
-        .item-header {
-            font-weight: bold;
-            color: #34495e;
-            margin-bottom: 5px;
-            font-size: 1.1em;
-        }
-        .item-subheader {
-            font-style: italic;
-            color: #7f8c8d;
-            margin-bottom: 5px;
-        }
-        .item-details {
-            padding-left: 20px;
-            margin-top: 5px;
-            list-style-type: disc;
-        }
-    </style>
+    <title>Lê Minh Thư - Portfolio & Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="cv-container">
-        <div class="left-column">
-            
-            <img src="avatar.jfif" alt="Ảnh đại diện Lê Minh Thư" class="profile-img">
-
-            <div class="name-title">
-                <h1>LÊ MINH THƯ</h1>
-                <p>Sinh viên Kế toán - Kiểm toán ACCA</p>
-            </div>
-
-            <h2>Liên hệ</h2>
-            <div class="section-content">
-                <ul class="list-detail">
-                    <li><strong>Ngày sinh:</strong> 26/06/2006</li>
-                    <li><strong>Email:</strong> minhthu2606@gmail.com</li>
-                    <li><strong>Điện thoại:</strong> 0822906206</li>
-                    <li><strong>Địa chỉ:</strong> Đống Đa, Hà Nội, Việt Nam</li>
-                    <li><strong>LinkedIn:</strong> Minh Thư Lê</li>
-                </ul>
+    <div class="main-container">
+        
+        <aside class="sidebar">
+            <div class="profile-card">
+                <img src="avatar.jfif" alt="Ảnh chân dung Lê Minh Thư" class="avatar">
+                <h2>LÊ MINH THƯ</h2>
+                <p class="title">Kế toán - Kiểm toán ACCA | Tổ chức sự kiện</p>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> 
+                    <a href="https://lminhthu2606-afk.github.io/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:lminhthu2606@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
             </div>
             
-            <h2>Tính cách</h2>
-            <div class="section-content">
-                <ul class="list-detail trait-list">
-                    <li>Chủ động</li>
-                    <li>Có trách nhiệm</li>
-                    <li>Tổ chức tốt</li>
-                    <li>Thích học hỏi</li>
-                    <li>Hợp tác</li>
-                </ul>
+            <div class="contact-info">
+                <h3>Thông tin Liên hệ</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Đống Đa, Hà Nội</p>
+                <p><i class="fas fa-phone"></i> 0822906206</p>
+                <p><i class="fas fa-birthday-cake"></i> 26/06/2006</p>
             </div>
+        </aside>
 
-            <h2>Kỹ năng</h2>
-            <div class="section-content">
-                <p><strong>Ngôn ngữ:</strong></p>
-                <ul class="list-detail">
-                    <li>Tiếng Anh: Nghe - Đọc - Hiểu (B2), Giao tiếp cơ bản</li>
-                </ul>
-
-                <p><strong>Kỹ năng Tin học:</strong></p>
-                <ul class="list-detail">
-                    <li>Sử dụng tương đối thành thạo các công cụ Microsoft (Word, Excel, PowerPoint), Google (Docs, Sheets, Slides)</li>
-                    <li>Thiết kế cơ bản với Canva</li>
-                </ul>
-
-                <p><strong>Kỹ năng mềm:</strong></p>
-                <ul class="list-detail">
-                    <li>Làm việc cá nhân và làm việc nhóm hiệu quả</li>
-                    <li>Quản lý thời gian</li>
-                </ul>
-            </div>
-
-            <h2>Sở thích</h2>
-            <div class="section-content">
-                <ul class="list-detail trait-list">
-                    <li>Thời trang</li>
-                    <li>Du lịch</li>
-                    <li>Tình nguyện</li>
-                    <li>Ẩm thực</li>
-                    <li>Học ngoại ngữ</li>
-                    <li>Đọc sách</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="right-column">
+        <main class="content-area">
             
-            <h2>Giới thiệu</h2>
-            <div class="section-content">
-                <p>Tôi là sinh viên năm hai khoa Kế toán - Kiểm toán, chuyên ngành Kế toán - Kiểm toán theo định hướng nghề nghiệp quốc tế ACCA, trường Đại học Ngoại Thương Hà Nội. Tôi tìm kiếm cơ hội để phát triển kỹ năng tổ chức và làm việc nhóm thông qua các hoạt động cộng đồng.</p>
-            </div>
+            <section id="about" class="section">
+                <h1 class="section-title"><i class="fas fa-user-circle"></i> Giới thiệu</h1>
+                <p>Tôi là sinh viên năm hai Khoa Kế toán - Kiểm toán, chuyên ngành Kế toán - Kiểm toán theo định hướng nghề nghiệp quốc tế ACCA, tại Trường Đại học Ngoại thương Hà Nội.</p>
+                <p>Tôi là người <b>ham học hỏi, có trách nhiệm</b> và <b>tập trung vào chi tiết</b>. Tôi có kinh nghiệm tổ chức sự kiện và quản lý dự án nhỏ, kết hợp giữa tư duy phân tích và khả năng tương tác, sắp xếp linh hoạt.</p>
+            </section>
 
-            <h2>Học vấn</h2>
-            <div class="section-content">
-                <div class="item-header">Trường Đại học Ngoại thương</div>
-                <div class="item-subheader">Kế toán - Kiểm toán ACCA</div>
-                <p style="margin-top: 0; font-size: 0.9em;">2024 - Hiện tại</p>
-            </div>
+            <section id="education" class="section">
+                <h1 class="section-title"><i class="fas fa-graduation-cap"></i> Học vấn</h1>
+                <div class="item-block">
+                    <h3>Trường Đại học Ngoại thương</h3>
+                    <p class="duration">2024 - nay</p>
+                    <p>Chuyên ngành: Kế toán - Kiểm toán ACCA</p>
+                </div>
+            </section>
 
-            <h2>Hoạt động</h2>
-            <div class="section-content">
-                <div class="item-header">Phó Chủ tịch Đối nội Gen 5</div>
-                <div class="item-subheader">Social Business Creation Youth Community (SBC YC - FIIS)</div>
-                <p style="margin-top: 0; font-size: 0.9em;">Tháng 9/2025 - Hiện tại</p>
-                <ul class="item-details">
-                    <li>Phụ trách công tác đối nội, quản lý và kết nối thành viên trong tổ chức.</li>
-                    <li>Đảm nhận vai trò tổ chức sự kiện online cho các talk show, buổi phát động, diễn đàn, bootcamp.</li>
-                    <li>Trước đó là Thành viên Ban tổ chức Gen 4.</li>
-                </ul>
-            </div>
+            <section id="activities" class="section">
+                <h1 class="section-title"><i class="fas fa-clipboard-list"></i> Hoạt động Cộng đồng</h1>
+                <div class="item-block">
+                    <h3>Social Business Creation Youth Community (SBC YC - FIIS)</h3>
+                    <p class="duration">2024 - nay</p>
+                    <ul>
+                        <li>Phó Chủ tịch Đối nội Gen 5</li>
+                        <li>Thành viên Ban tổ chức Gen 4</li>
+                        <li>Đã tổ chức các sự kiện online cho talk show, diễn đàn, bootcamp.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="skills" class="section">
+                <h1 class="section-title"><i class="fas fa-tools"></i> Kỹ năng</h1>
+                <div class="skills-grid">
+                    <span class="skill-badge"><i class="fas fa-language"></i> Tiếng Anh (B2)</span>
+                    <span class="skill-badge"><i class="fas fa-users"></i> Làm việc nhóm</span>
+                    <span class="skill-badge"><i class="far fa-clock"></i> Quản lý thời gian</span>
+                    <span class="skill-badge"><i class="fas fa-file-excel"></i> Tin học Văn phòng (MS, Google)</span>
+                    <span class="skill-badge"><i class="fas fa-palette"></i> Thiết kế Canva</span>
+                </div>
+            </section>
             
-        </div>
+            <section id="interests" class="section">
+                <h1 class="section-title"><i class="fas fa-heart"></i> Điều quan tâm</h1>
+                <div class="skills-grid">
+                    <span class="interest-tag">Thời trang</span>
+                    <span class="interest-tag">Du lịch</span>
+                    <span class="interest-tag">Tình nguyện</span>
+                    <span class="interest-tag">Đọc sách</span>
+                    <span class="interest-tag">Ẩm thực</span>
+                </div>
+            </section>
+            
+        </main>
     </div>
 
 </body>
